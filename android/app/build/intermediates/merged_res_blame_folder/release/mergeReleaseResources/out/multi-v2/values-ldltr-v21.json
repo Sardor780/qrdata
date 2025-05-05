@@ -1,0 +1,19 @@
+{
+    "logs": [
+        {
+            "outputFile": "com.ubtuit.qr_data.app-mergeReleaseResources-42:/values-ldltr-v21/values-ldltr-v21.xml",
+            "map": [
+                {
+                    "source": "C:\\Users\\M.Sardor\\.gradle\\caches\\8.10.2\\transforms\\194b56f7f747285f3e70bccee19e5464\\transformed\\appcompat-1.6.1\\res\\values-ldltr-v21\\values-ldltr-v21.xml",
+                    "from": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "55",
+                        "endColumns": "112",
+                        "endOffsets": "163"
+                    }
+                }
+            ]
+        }
+    ]
+}

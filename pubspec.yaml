@@ -1,0 +1,40 @@
+name: qr_data
+description: "A new Flutter project."
+publish_to: 'none'
+version: 1.0.0+1
+
+environment:
+  sdk: ^3.7.2
+
+dependencies:
+  flutter:
+    sdk: flutter
+  qr_flutter: ^4.1.0
+  mobile_scanner: ^5.2.2
+  uuid: ^4.4.0
+  image_picker: ^1.1.2
+  path_provider: ^2.1.4
+  image_cropper: ^8.0.2
+  cupertino_icons: ^1.0.8
+  encrypt: ^5.0.3  # Шифрование
+  google_fonts: ^6.2.1
+  mysql1: ^0.20.0
+  crypto: ^3.0.5
+  http: ^1.2.2
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^5.0.0
+
+flutter:
+  uses-material-design: true
+  assets:
+    - assets/user_photo.jpg
+    - assets/background.jpg
+    - assets/bckg_for_ms.jpg
+    - assets/logo.png
+    - assets/patient_avatar.jpg
+    - assets/doctor_avatar.jpg
+    - assets/hospital.jpeg
+    - assets/log_bckg.png

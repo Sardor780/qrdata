@@ -1,0 +1,347 @@
+1<?xml version="1.0" encoding="utf-8"?>
+2<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+3    package="com.ubtuit.qr_data"
+4    android:versionCode="1"
+5    android:versionName="1.0.0" >
+6
+7    <uses-sdk
+8        android:minSdkVersion="21"
+9        android:targetSdkVersion="35" />
+10    <!--
+11         Required to query activities that can process text, see:
+12         https://developer.android.com/training/package-visibility and
+13         https://developer.android.com/reference/android/content/Intent#ACTION_PROCESS_TEXT.
+14
+15         In particular, this is used by the Flutter engine in io.flutter.plugin.text.ProcessTextPlugin.
+16    -->
+17    <queries>
+17-->C:\Users\M.Sardor\AndroidStudioProjects\qr_data\android\app\src\main\AndroidManifest.xml:39:5-44:15
+18        <intent>
+18-->C:\Users\M.Sardor\AndroidStudioProjects\qr_data\android\app\src\main\AndroidManifest.xml:40:9-43:18
+19            <action android:name="android.intent.action.PROCESS_TEXT" />
+19-->C:\Users\M.Sardor\AndroidStudioProjects\qr_data\android\app\src\main\AndroidManifest.xml:41:13-72
+19-->C:\Users\M.Sardor\AndroidStudioProjects\qr_data\android\app\src\main\AndroidManifest.xml:41:21-70
+20
+21            <data android:mimeType="text/plain" />
+21-->C:\Users\M.Sardor\AndroidStudioProjects\qr_data\android\app\src\main\AndroidManifest.xml:42:13-50
+21-->C:\Users\M.Sardor\AndroidStudioProjects\qr_data\android\app\src\main\AndroidManifest.xml:42:19-48
+22        </intent>
+23    </queries>
+24
+25    <uses-permission android:name="android.permission.CAMERA" />
+25-->[:mobile_scanner] C:\Users\M.Sardor\AppData\Local\Pub\Cache\hosted\pub.dev\mobile_scanner-5.2.3\android\build\intermediates\merged_manifest\release\processReleaseManifest\AndroidManifest.xml:7:5-65
+25-->[:mobile_scanner] C:\Users\M.Sardor\AppData\Local\Pub\Cache\hosted\pub.dev\mobile_scanner-5.2.3\android\build\intermediates\merged_manifest\release\processReleaseManifest\AndroidManifest.xml:7:22-62
+26
+27    <uses-feature
+27-->[:mobile_scanner] C:\Users\M.Sardor\AppData\Local\Pub\Cache\hosted\pub.dev\mobile_scanner-5.2.3\android\build\intermediates\merged_manifest\release\processReleaseManifest\AndroidManifest.xml:9:5-11:36
+28        android:name="android.hardware.camera"
+28-->[:mobile_scanner] C:\Users\M.Sardor\AppData\Local\Pub\Cache\hosted\pub.dev\mobile_scanner-5.2.3\android\build\intermediates\merged_manifest\release\processReleaseManifest\AndroidManifest.xml:10:9-47
+29        android:required="false" />
+29-->[:mobile_scanner] C:\Users\M.Sardor\AppData\Local\Pub\Cache\hosted\pub.dev\mobile_scanner-5.2.3\android\build\intermediates\merged_manifest\release\processReleaseManifest\AndroidManifest.xml:11:9-33
+30
+31    <permission
+31-->[androidx.core:core:1.13.1] C:\Users\M.Sardor\.gradle\caches\8.10.2\transforms\101dd2400c1e7fdddc38d2ba871cdff3\transformed\core-1.13.1\AndroidManifest.xml:22:5-24:47
+32        android:name="com.ubtuit.qr_data.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"
+32-->[androidx.core:core:1.13.1] C:\Users\M.Sardor\.gradle\caches\8.10.2\transforms\101dd2400c1e7fdddc38d2ba871cdff3\transformed\core-1.13.1\AndroidManifest.xml:23:9-81
+33        android:protectionLevel="signature" />
+33-->[androidx.core:core:1.13.1] C:\Users\M.Sardor\.gradle\caches\8.10.2\transforms\101dd2400c1e7fdddc38d2ba871cdff3\transformed\core-1.13.1\AndroidManifest.xml:24:9-44
+34
+35    <uses-permission android:name="com.ubtuit.qr_data.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION" /> <!-- Although the *SdkVersion is captured in gradle build files, this is required for non gradle builds -->
+35-->[androidx.core:core:1.13.1] C:\Users\M.Sardor\.gradle\caches\8.10.2\transforms\101dd2400c1e7fdddc38d2ba871cdff3\transformed\core-1.13.1\AndroidManifest.xml:26:5-97
+35-->[androidx.core:core:1.13.1] C:\Users\M.Sardor\.gradle\caches\8.10.2\transforms\101dd2400c1e7fdddc38d2ba871cdff3\transformed\core-1.13.1\AndroidManifest.xml:26:22-94
+36    <!-- <uses-sdk android:minSdkVersion="14"/> -->
+37    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+37-->[com.google.android.datatransport:transport-backend-cct:2.3.3] C:\Users\M.Sardor\.gradle\caches\8.10.2\transforms\1980fbc8993c901f58cec4149e557a76\transformed\jetified-transport-backend-cct-2.3.3\AndroidManifest.xml:25:5-79
+37-->[com.google.android.datatransport:transport-backend-cct:2.3.3] C:\Users\M.Sardor\.gradle\caches\8.10.2\transforms\1980fbc8993c901f58cec4149e557a76\transformed\jetified-transport-backend-cct-2.3.3\AndroidManifest.xml:25:22-76
+38    <uses-permission android:name="android.permission.INTERNET" />
+38-->[com.google.android.datatransport:transport-backend-cct:2.3.3] C:\Users\M.Sardor\.gradle\caches\8.10.2\transforms\1980fbc8993c901f58cec4149e557a76\transformed\jetified-transport-backend-cct-2.3.3\AndroidManifest.xml:26:5-67
+38-->[com.google.android.datatransport:transport-backend-cct:2.3.3] C:\Users\M.Sardor\.gradle\caches\8.10.2\transforms\1980fbc8993c901f58cec4149e557a76\transformed\jetified-transport-backend-cct-2.3.3\AndroidManifest.xml:26:22-64
+39
+40    <application
+41        android:name="android.app.Application"
+41-->C:\Users\M.Sardor\AndroidStudioProjects\qr_data\android\app\src\main\AndroidManifest.xml:4:9-42
+42        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
+42-->[androidx.core:core:1.13.1] C:\Users\M.Sardor\.gradle\caches\8.10.2\transforms\101dd2400c1e7fdddc38d2ba871cdff3\transformed\core-1.13.1\AndroidManifest.xml:28:18-86
+43        android:extractNativeLibs="true"
+44        android:icon="@mipmap/ic_launcher"
+44-->C:\Users\M.Sardor\AndroidStudioProjects\qr_data\android\app\src\main\AndroidManifest.xml:5:9-43
+45        android:label="untitled2" >
+45-->C:\Users\M.Sardor\AndroidStudioProjects\qr_data\android\app\src\main\AndroidManifest.xml:3:9-34
+46        <activity
+46-->C:\Users\M.Sardor\AndroidStudioProjects\qr_data\android\app\src\main\AndroidManifest.xml:6:9-27:20
+47            android:name="com.ubtuit.qr_data.MainActivity"
+47-->C:\Users\M.Sardor\AndroidStudioProjects\qr_data\android\app\src\main\AndroidManifest.xml:7:13-41
+48            android:configChanges="orientation|keyboardHidden|keyboard|screenSize|smallestScreenSize|locale|layoutDirection|fontScale|screenLayout|density|uiMode"
+48-->C:\Users\M.Sardor\AndroidStudioProjects\qr_data\android\app\src\main\AndroidManifest.xml:12:13-163
+49            android:exported="true"
+49-->C:\Users\M.Sardor\AndroidStudioProjects\qr_data\android\app\src\main\AndroidManifest.xml:8:13-36
+50            android:hardwareAccelerated="true"
+50-->C:\Users\M.Sardor\AndroidStudioProjects\qr_data\android\app\src\main\AndroidManifest.xml:13:13-47
+51            android:launchMode="singleTop"
+51-->C:\Users\M.Sardor\AndroidStudioProjects\qr_data\android\app\src\main\AndroidManifest.xml:9:13-43
+52            android:taskAffinity=""
+52-->C:\Users\M.Sardor\AndroidStudioProjects\qr_data\android\app\src\main\AndroidManifest.xml:10:13-36
+53            android:theme="@style/LaunchTheme"
+53-->C:\Users\M.Sardor\AndroidStudioProjects\qr_data\android\app\src\main\AndroidManifest.xml:11:13-47
+54            android:windowSoftInputMode="adjustResize" >
+54-->C:\Users\M.Sardor\AndroidStudioProjects\qr_data\android\app\src\main\AndroidManifest.xml:14:13-55
+55
+56            <!--
+57                 Specifies an Android theme to apply to this Activity as soon as
+58                 the Android process has started. This theme is visible to the user
+59                 while the Flutter UI initializes. After that, this theme continues
+60                 to determine the Window background behind the Flutter UI.
+61            -->
+62            <meta-data
+62-->C:\Users\M.Sardor\AndroidStudioProjects\qr_data\android\app\src\main\AndroidManifest.xml:19:13-22:17
+63                android:name="io.flutter.embedding.android.NormalTheme"
+63-->C:\Users\M.Sardor\AndroidStudioProjects\qr_data\android\app\src\main\AndroidManifest.xml:20:15-70
+64                android:resource="@style/NormalTheme" />
+64-->C:\Users\M.Sardor\AndroidStudioProjects\qr_data\android\app\src\main\AndroidManifest.xml:21:15-52
+65
+66            <intent-filter>
+66-->C:\Users\M.Sardor\AndroidStudioProjects\qr_data\android\app\src\main\AndroidManifest.xml:23:13-26:29
+67                <action android:name="android.intent.action.MAIN" />
+67-->C:\Users\M.Sardor\AndroidStudioProjects\qr_data\android\app\src\main\AndroidManifest.xml:24:17-68
+67-->C:\Users\M.Sardor\AndroidStudioProjects\qr_data\android\app\src\main\AndroidManifest.xml:24:25-66
+68
+69                <category android:name="android.intent.category.LAUNCHER" />
+69-->C:\Users\M.Sardor\AndroidStudioProjects\qr_data\android\app\src\main\AndroidManifest.xml:25:17-76
+69-->C:\Users\M.Sardor\AndroidStudioProjects\qr_data\android\app\src\main\AndroidManifest.xml:25:27-74
+70            </intent-filter>
+71        </activity>
+72        <!--
+73             Don't delete the meta-data below.
+74             This is used by the Flutter tool to generate GeneratedPluginRegistrant.java
+75        -->
+76        <meta-data
+76-->C:\Users\M.Sardor\AndroidStudioProjects\qr_data\android\app\src\main\AndroidManifest.xml:30:9-32:33
+77            android:name="flutterEmbedding"
+77-->C:\Users\M.Sardor\AndroidStudioProjects\qr_data\android\app\src\main\AndroidManifest.xml:31:13-44
+78            android:value="2" />
+78-->C:\Users\M.Sardor\AndroidStudioProjects\qr_data\android\app\src\main\AndroidManifest.xml:32:13-30
+79
+80        <provider
+80-->[:image_picker_android] C:\Users\M.Sardor\AppData\Local\Pub\Cache\hosted\pub.dev\image_picker_android-0.8.12+22\android\build\intermediates\merged_manifest\release\processReleaseManifest\AndroidManifest.xml:9:9-17:20
+81            android:name="io.flutter.plugins.imagepicker.ImagePickerFileProvider"
+81-->[:image_picker_android] C:\Users\M.Sardor\AppData\Local\Pub\Cache\hosted\pub.dev\image_picker_android-0.8.12+22\android\build\intermediates\merged_manifest\release\processReleaseManifest\AndroidManifest.xml:10:13-82
+82            android:authorities="com.ubtuit.qr_data.flutter.image_provider"
+82-->[:image_picker_android] C:\Users\M.Sardor\AppData\Local\Pub\Cache\hosted\pub.dev\image_picker_android-0.8.12+22\android\build\intermediates\merged_manifest\release\processReleaseManifest\AndroidManifest.xml:11:13-74
+83            android:exported="false"
+83-->[:image_picker_android] C:\Users\M.Sardor\AppData\Local\Pub\Cache\hosted\pub.dev\image_picker_android-0.8.12+22\android\build\intermediates\merged_manifest\release\processReleaseManifest\AndroidManifest.xml:12:13-37
+84            android:grantUriPermissions="true" >
+84-->[:image_picker_android] C:\Users\M.Sardor\AppData\Local\Pub\Cache\hosted\pub.dev\image_picker_android-0.8.12+22\android\build\intermediates\merged_manifest\release\processReleaseManifest\AndroidManifest.xml:13:13-47
+85            <meta-data
+85-->[:image_picker_android] C:\Users\M.Sardor\AppData\Local\Pub\Cache\hosted\pub.dev\image_picker_android-0.8.12+22\android\build\intermediates\merged_manifest\release\processReleaseManifest\AndroidManifest.xml:14:13-16:75
+86                android:name="android.support.FILE_PROVIDER_PATHS"
+86-->[:image_picker_android] C:\Users\M.Sardor\AppData\Local\Pub\Cache\hosted\pub.dev\image_picker_android-0.8.12+22\android\build\intermediates\merged_manifest\release\processReleaseManifest\AndroidManifest.xml:15:17-67
+87                android:resource="@xml/flutter_image_picker_file_paths" />
+87-->[:image_picker_android] C:\Users\M.Sardor\AppData\Local\Pub\Cache\hosted\pub.dev\image_picker_android-0.8.12+22\android\build\intermediates\merged_manifest\release\processReleaseManifest\AndroidManifest.xml:16:17-72
+88        </provider> <!-- Trigger Google Play services to install the backported photo picker module. -->
+89        <service
+89-->[:image_picker_android] C:\Users\M.Sardor\AppData\Local\Pub\Cache\hosted\pub.dev\image_picker_android-0.8.12+22\android\build\intermediates\merged_manifest\release\processReleaseManifest\AndroidManifest.xml:19:9-31:19
+90            android:name="com.google.android.gms.metadata.ModuleDependencies"
+90-->[:image_picker_android] C:\Users\M.Sardor\AppData\Local\Pub\Cache\hosted\pub.dev\image_picker_android-0.8.12+22\android\build\intermediates\merged_manifest\release\processReleaseManifest\AndroidManifest.xml:20:13-78
+91            android:enabled="false"
+91-->[:image_picker_android] C:\Users\M.Sardor\AppData\Local\Pub\Cache\hosted\pub.dev\image_picker_android-0.8.12+22\android\build\intermediates\merged_manifest\release\processReleaseManifest\AndroidManifest.xml:21:13-36
+92            android:exported="false" >
+92-->[:image_picker_android] C:\Users\M.Sardor\AppData\Local\Pub\Cache\hosted\pub.dev\image_picker_android-0.8.12+22\android\build\intermediates\merged_manifest\release\processReleaseManifest\AndroidManifest.xml:22:13-37
+93            <intent-filter>
+93-->[:image_picker_android] C:\Users\M.Sardor\AppData\Local\Pub\Cache\hosted\pub.dev\image_picker_android-0.8.12+22\android\build\intermediates\merged_manifest\release\processReleaseManifest\AndroidManifest.xml:24:13-26:29
+94                <action android:name="com.google.android.gms.metadata.MODULE_DEPENDENCIES" />
+94-->[:image_picker_android] C:\Users\M.Sardor\AppData\Local\Pub\Cache\hosted\pub.dev\image_picker_android-0.8.12+22\android\build\intermediates\merged_manifest\release\processReleaseManifest\AndroidManifest.xml:25:17-94
+94-->[:image_picker_android] C:\Users\M.Sardor\AppData\Local\Pub\Cache\hosted\pub.dev\image_picker_android-0.8.12+22\android\build\intermediates\merged_manifest\release\processReleaseManifest\AndroidManifest.xml:25:25-91
+95            </intent-filter>
+96
+97            <meta-data
+97-->[:image_picker_android] C:\Users\M.Sardor\AppData\Local\Pub\Cache\hosted\pub.dev\image_picker_android-0.8.12+22\android\build\intermediates\merged_manifest\release\processReleaseManifest\AndroidManifest.xml:28:13-30:36
+98                android:name="photopicker_activity:0:required"
+98-->[:image_picker_android] C:\Users\M.Sardor\AppData\Local\Pub\Cache\hosted\pub.dev\image_picker_android-0.8.12+22\android\build\intermediates\merged_manifest\release\processReleaseManifest\AndroidManifest.xml:29:17-63
+99                android:value="" />
+99-->[:image_picker_android] C:\Users\M.Sardor\AppData\Local\Pub\Cache\hosted\pub.dev\image_picker_android-0.8.12+22\android\build\intermediates\merged_manifest\release\processReleaseManifest\AndroidManifest.xml:30:17-33
+100        </service>
+101        <service
+101-->[com.google.android.gms:play-services-mlkit-barcode-scanning:18.3.0] C:\Users\M.Sardor\.gradle\caches\8.10.2\transforms\472fd3924212f3c8e22630aa3babaa39\transformed\jetified-play-services-mlkit-barcode-scanning-18.3.0\AndroidManifest.xml:9:9-15:19
+102            android:name="com.google.mlkit.common.internal.MlKitComponentDiscoveryService"
+102-->[com.google.android.gms:play-services-mlkit-barcode-scanning:18.3.0] C:\Users\M.Sardor\.gradle\caches\8.10.2\transforms\472fd3924212f3c8e22630aa3babaa39\transformed\jetified-play-services-mlkit-barcode-scanning-18.3.0\AndroidManifest.xml:10:13-91
+103            android:directBootAware="true"
+103-->[com.google.mlkit:common:18.9.0] C:\Users\M.Sardor\.gradle\caches\8.10.2\transforms\07456eeb64b85c1c1603cb24ddc9ee97\transformed\jetified-common-18.9.0\AndroidManifest.xml:17:13-43
+104            android:exported="false" >
+104-->[com.google.android.gms:play-services-mlkit-barcode-scanning:18.3.0] C:\Users\M.Sardor\.gradle\caches\8.10.2\transforms\472fd3924212f3c8e22630aa3babaa39\transformed\jetified-play-services-mlkit-barcode-scanning-18.3.0\AndroidManifest.xml:11:13-37
+105            <meta-data
+105-->[com.google.android.gms:play-services-mlkit-barcode-scanning:18.3.0] C:\Users\M.Sardor\.gradle\caches\8.10.2\transforms\472fd3924212f3c8e22630aa3babaa39\transformed\jetified-play-services-mlkit-barcode-scanning-18.3.0\AndroidManifest.xml:12:13-14:85
+106                android:name="com.google.firebase.components:com.google.mlkit.vision.barcode.internal.BarcodeRegistrar"
+106-->[com.google.android.gms:play-services-mlkit-barcode-scanning:18.3.0] C:\Users\M.Sardor\.gradle\caches\8.10.2\transforms\472fd3924212f3c8e22630aa3babaa39\transformed\jetified-play-services-mlkit-barcode-scanning-18.3.0\AndroidManifest.xml:13:17-120
+107                android:value="com.google.firebase.components.ComponentRegistrar" />
+107-->[com.google.android.gms:play-services-mlkit-barcode-scanning:18.3.0] C:\Users\M.Sardor\.gradle\caches\8.10.2\transforms\472fd3924212f3c8e22630aa3babaa39\transformed\jetified-play-services-mlkit-barcode-scanning-18.3.0\AndroidManifest.xml:14:17-82
+108            <meta-data
+108-->[com.google.mlkit:vision-common:17.3.0] C:\Users\M.Sardor\.gradle\caches\8.10.2\transforms\93c550e814e63e3847e8b3360c11e71d\transformed\jetified-vision-common-17.3.0\AndroidManifest.xml:12:13-14:85
+109                android:name="com.google.firebase.components:com.google.mlkit.vision.common.internal.VisionCommonRegistrar"
+109-->[com.google.mlkit:vision-common:17.3.0] C:\Users\M.Sardor\.gradle\caches\8.10.2\transforms\93c550e814e63e3847e8b3360c11e71d\transformed\jetified-vision-common-17.3.0\AndroidManifest.xml:13:17-124
+110                android:value="com.google.firebase.components.ComponentRegistrar" />
+110-->[com.google.mlkit:vision-common:17.3.0] C:\Users\M.Sardor\.gradle\caches\8.10.2\transforms\93c550e814e63e3847e8b3360c11e71d\transformed\jetified-vision-common-17.3.0\AndroidManifest.xml:14:17-82
+111            <meta-data
+111-->[com.google.mlkit:common:18.9.0] C:\Users\M.Sardor\.gradle\caches\8.10.2\transforms\07456eeb64b85c1c1603cb24ddc9ee97\transformed\jetified-common-18.9.0\AndroidManifest.xml:20:13-22:85
+112                android:name="com.google.firebase.components:com.google.mlkit.common.internal.CommonComponentRegistrar"
+112-->[com.google.mlkit:common:18.9.0] C:\Users\M.Sardor\.gradle\caches\8.10.2\transforms\07456eeb64b85c1c1603cb24ddc9ee97\transformed\jetified-common-18.9.0\AndroidManifest.xml:21:17-120
+113                android:value="com.google.firebase.components.ComponentRegistrar" />
+113-->[com.google.mlkit:common:18.9.0] C:\Users\M.Sardor\.gradle\caches\8.10.2\transforms\07456eeb64b85c1c1603cb24ddc9ee97\transformed\jetified-common-18.9.0\AndroidManifest.xml:22:17-82
+114        </service>
+115
+116        <provider
+116-->[com.google.mlkit:common:18.9.0] C:\Users\M.Sardor\.gradle\caches\8.10.2\transforms\07456eeb64b85c1c1603cb24ddc9ee97\transformed\jetified-common-18.9.0\AndroidManifest.xml:9:9-13:38
+117            android:name="com.google.mlkit.common.internal.MlKitInitProvider"
+117-->[com.google.mlkit:common:18.9.0] C:\Users\M.Sardor\.gradle\caches\8.10.2\transforms\07456eeb64b85c1c1603cb24ddc9ee97\transformed\jetified-common-18.9.0\AndroidManifest.xml:10:13-78
+118            android:authorities="com.ubtuit.qr_data.mlkitinitprovider"
+118-->[com.google.mlkit:common:18.9.0] C:\Users\M.Sardor\.gradle\caches\8.10.2\transforms\07456eeb64b85c1c1603cb24ddc9ee97\transformed\jetified-common-18.9.0\AndroidManifest.xml:11:13-69
+119            android:exported="false"
+119-->[com.google.mlkit:common:18.9.0] C:\Users\M.Sardor\.gradle\caches\8.10.2\transforms\07456eeb64b85c1c1603cb24ddc9ee97\transformed\jetified-common-18.9.0\AndroidManifest.xml:12:13-37
+120            android:initOrder="99" />
+120-->[com.google.mlkit:common:18.9.0] C:\Users\M.Sardor\.gradle\caches\8.10.2\transforms\07456eeb64b85c1c1603cb24ddc9ee97\transformed\jetified-common-18.9.0\AndroidManifest.xml:13:13-35
+121
+122        <activity
+122-->[com.google.android.gms:play-services-base:18.1.0] C:\Users\M.Sardor\.gradle\caches\8.10.2\transforms\ca27d5be700e540c524951efc815aaf6\transformed\jetified-play-services-base-18.1.0\AndroidManifest.xml:20:9-22:45
+123            android:name="com.google.android.gms.common.api.GoogleApiActivity"
+123-->[com.google.android.gms:play-services-base:18.1.0] C:\Users\M.Sardor\.gradle\caches\8.10.2\transforms\ca27d5be700e540c524951efc815aaf6\transformed\jetified-play-services-base-18.1.0\AndroidManifest.xml:20:19-85
+124            android:exported="false"
+124-->[com.google.android.gms:play-services-base:18.1.0] C:\Users\M.Sardor\.gradle\caches\8.10.2\transforms\ca27d5be700e540c524951efc815aaf6\transformed\jetified-play-services-base-18.1.0\AndroidManifest.xml:22:19-43
+125            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+125-->[com.google.android.gms:play-services-base:18.1.0] C:\Users\M.Sardor\.gradle\caches\8.10.2\transforms\ca27d5be700e540c524951efc815aaf6\transformed\jetified-play-services-base-18.1.0\AndroidManifest.xml:21:19-78
+126
+127        <meta-data
+127-->[com.google.android.gms:play-services-basement:18.1.0] C:\Users\M.Sardor\.gradle\caches\8.10.2\transforms\3ae162051fc206286eab2fc7dd91a084\transformed\jetified-play-services-basement-18.1.0\AndroidManifest.xml:21:9-23:69
+128            android:name="com.google.android.gms.version"
+128-->[com.google.android.gms:play-services-basement:18.1.0] C:\Users\M.Sardor\.gradle\caches\8.10.2\transforms\3ae162051fc206286eab2fc7dd91a084\transformed\jetified-play-services-basement-18.1.0\AndroidManifest.xml:22:13-58
+129            android:value="@integer/google_play_services_version" />
+129-->[com.google.android.gms:play-services-basement:18.1.0] C:\Users\M.Sardor\.gradle\caches\8.10.2\transforms\3ae162051fc206286eab2fc7dd91a084\transformed\jetified-play-services-basement-18.1.0\AndroidManifest.xml:23:13-66
+130        <!--
+131        Service for holding metadata. Cannot be instantiated.
+132        Metadata will be merged from other manifests.
+133        -->
+134        <service
+134-->[androidx.camera:camera-core:1.3.3] C:\Users\M.Sardor\.gradle\caches\8.10.2\transforms\c79a4586b4f9c51c0569839e83556a80\transformed\jetified-camera-core-1.3.3\AndroidManifest.xml:29:9-33:78
+135            android:name="androidx.camera.core.impl.MetadataHolderService"
+135-->[androidx.camera:camera-core:1.3.3] C:\Users\M.Sardor\.gradle\caches\8.10.2\transforms\c79a4586b4f9c51c0569839e83556a80\transformed\jetified-camera-core-1.3.3\AndroidManifest.xml:30:13-75
+136            android:enabled="false"
+136-->[androidx.camera:camera-core:1.3.3] C:\Users\M.Sardor\.gradle\caches\8.10.2\transforms\c79a4586b4f9c51c0569839e83556a80\transformed\jetified-camera-core-1.3.3\AndroidManifest.xml:31:13-36
+137            android:exported="false" >
+137-->[androidx.camera:camera-core:1.3.3] C:\Users\M.Sardor\.gradle\caches\8.10.2\transforms\c79a4586b4f9c51c0569839e83556a80\transformed\jetified-camera-core-1.3.3\AndroidManifest.xml:32:13-37
+138            <meta-data
+138-->[androidx.camera:camera-camera2:1.3.3] C:\Users\M.Sardor\.gradle\caches\8.10.2\transforms\5eef2e890ec2f6251369d361da2adefa\transformed\jetified-camera-camera2-1.3.3\AndroidManifest.xml:30:13-32:89
+139                android:name="androidx.camera.core.impl.MetadataHolderService.DEFAULT_CONFIG_PROVIDER"
+139-->[androidx.camera:camera-camera2:1.3.3] C:\Users\M.Sardor\.gradle\caches\8.10.2\transforms\5eef2e890ec2f6251369d361da2adefa\transformed\jetified-camera-camera2-1.3.3\AndroidManifest.xml:31:17-103
+140                android:value="androidx.camera.camera2.Camera2Config$DefaultProvider" />
+140-->[androidx.camera:camera-camera2:1.3.3] C:\Users\M.Sardor\.gradle\caches\8.10.2\transforms\5eef2e890ec2f6251369d361da2adefa\transformed\jetified-camera-camera2-1.3.3\AndroidManifest.xml:32:17-86
+141        </service>
+142
+143        <uses-library
+143-->[androidx.window:window:1.2.0] C:\Users\M.Sardor\.gradle\caches\8.10.2\transforms\1eccf12a6fff3e4437a19bb38eb4af54\transformed\jetified-window-1.2.0\AndroidManifest.xml:23:9-25:40
+144            android:name="androidx.window.extensions"
+144-->[androidx.window:window:1.2.0] C:\Users\M.Sardor\.gradle\caches\8.10.2\transforms\1eccf12a6fff3e4437a19bb38eb4af54\transformed\jetified-window-1.2.0\AndroidManifest.xml:24:13-54
+145            android:required="false" />
+145-->[androidx.window:window:1.2.0] C:\Users\M.Sardor\.gradle\caches\8.10.2\transforms\1eccf12a6fff3e4437a19bb38eb4af54\transformed\jetified-window-1.2.0\AndroidManifest.xml:25:13-37
+146        <uses-library
+146-->[androidx.window:window:1.2.0] C:\Users\M.Sardor\.gradle\caches\8.10.2\transforms\1eccf12a6fff3e4437a19bb38eb4af54\transformed\jetified-window-1.2.0\AndroidManifest.xml:26:9-28:40
+147            android:name="androidx.window.sidecar"
+147-->[androidx.window:window:1.2.0] C:\Users\M.Sardor\.gradle\caches\8.10.2\transforms\1eccf12a6fff3e4437a19bb38eb4af54\transformed\jetified-window-1.2.0\AndroidManifest.xml:27:13-51
+148            android:required="false" />
+148-->[androidx.window:window:1.2.0] C:\Users\M.Sardor\.gradle\caches\8.10.2\transforms\1eccf12a6fff3e4437a19bb38eb4af54\transformed\jetified-window-1.2.0\AndroidManifest.xml:28:13-37
+149
+150        <provider
+150-->[androidx.emoji2:emoji2:1.2.0] C:\Users\M.Sardor\.gradle\caches\8.10.2\transforms\e1e826b7881ecf4b76a20b31e470c615\transformed\jetified-emoji2-1.2.0\AndroidManifest.xml:24:9-32:20
+151            android:name="androidx.startup.InitializationProvider"
+151-->[androidx.emoji2:emoji2:1.2.0] C:\Users\M.Sardor\.gradle\caches\8.10.2\transforms\e1e826b7881ecf4b76a20b31e470c615\transformed\jetified-emoji2-1.2.0\AndroidManifest.xml:25:13-67
+152            android:authorities="com.ubtuit.qr_data.androidx-startup"
+152-->[androidx.emoji2:emoji2:1.2.0] C:\Users\M.Sardor\.gradle\caches\8.10.2\transforms\e1e826b7881ecf4b76a20b31e470c615\transformed\jetified-emoji2-1.2.0\AndroidManifest.xml:26:13-68
+153            android:exported="false" >
+153-->[androidx.emoji2:emoji2:1.2.0] C:\Users\M.Sardor\.gradle\caches\8.10.2\transforms\e1e826b7881ecf4b76a20b31e470c615\transformed\jetified-emoji2-1.2.0\AndroidManifest.xml:27:13-37
+154            <meta-data
+154-->[androidx.emoji2:emoji2:1.2.0] C:\Users\M.Sardor\.gradle\caches\8.10.2\transforms\e1e826b7881ecf4b76a20b31e470c615\transformed\jetified-emoji2-1.2.0\AndroidManifest.xml:29:13-31:52
+155                android:name="androidx.emoji2.text.EmojiCompatInitializer"
+155-->[androidx.emoji2:emoji2:1.2.0] C:\Users\M.Sardor\.gradle\caches\8.10.2\transforms\e1e826b7881ecf4b76a20b31e470c615\transformed\jetified-emoji2-1.2.0\AndroidManifest.xml:30:17-75
+156                android:value="androidx.startup" />
+156-->[androidx.emoji2:emoji2:1.2.0] C:\Users\M.Sardor\.gradle\caches\8.10.2\transforms\e1e826b7881ecf4b76a20b31e470c615\transformed\jetified-emoji2-1.2.0\AndroidManifest.xml:31:17-49
+157            <meta-data
+157-->[androidx.lifecycle:lifecycle-process:2.7.0] C:\Users\M.Sardor\.gradle\caches\8.10.2\transforms\e989c0f90c115fce823f1f5bf35dc5cb\transformed\jetified-lifecycle-process-2.7.0\AndroidManifest.xml:29:13-31:52
+158                android:name="androidx.lifecycle.ProcessLifecycleInitializer"
+158-->[androidx.lifecycle:lifecycle-process:2.7.0] C:\Users\M.Sardor\.gradle\caches\8.10.2\transforms\e989c0f90c115fce823f1f5bf35dc5cb\transformed\jetified-lifecycle-process-2.7.0\AndroidManifest.xml:30:17-78
+159                android:value="androidx.startup" />
+159-->[androidx.lifecycle:lifecycle-process:2.7.0] C:\Users\M.Sardor\.gradle\caches\8.10.2\transforms\e989c0f90c115fce823f1f5bf35dc5cb\transformed\jetified-lifecycle-process-2.7.0\AndroidManifest.xml:31:17-49
+160            <meta-data
+160-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\M.Sardor\.gradle\caches\8.10.2\transforms\39f3708d505cc022f9089d3690935a67\transformed\jetified-profileinstaller-1.3.1\AndroidManifest.xml:29:13-31:52
+161                android:name="androidx.profileinstaller.ProfileInstallerInitializer"
+161-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\M.Sardor\.gradle\caches\8.10.2\transforms\39f3708d505cc022f9089d3690935a67\transformed\jetified-profileinstaller-1.3.1\AndroidManifest.xml:30:17-85
+162                android:value="androidx.startup" />
+162-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\M.Sardor\.gradle\caches\8.10.2\transforms\39f3708d505cc022f9089d3690935a67\transformed\jetified-profileinstaller-1.3.1\AndroidManifest.xml:31:17-49
+163        </provider>
+164
+165        <receiver
+165-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\M.Sardor\.gradle\caches\8.10.2\transforms\39f3708d505cc022f9089d3690935a67\transformed\jetified-profileinstaller-1.3.1\AndroidManifest.xml:34:9-52:20
+166            android:name="androidx.profileinstaller.ProfileInstallReceiver"
+166-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\M.Sardor\.gradle\caches\8.10.2\transforms\39f3708d505cc022f9089d3690935a67\transformed\jetified-profileinstaller-1.3.1\AndroidManifest.xml:35:13-76
+167            android:directBootAware="false"
+167-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\M.Sardor\.gradle\caches\8.10.2\transforms\39f3708d505cc022f9089d3690935a67\transformed\jetified-profileinstaller-1.3.1\AndroidManifest.xml:36:13-44
+168            android:enabled="true"
+168-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\M.Sardor\.gradle\caches\8.10.2\transforms\39f3708d505cc022f9089d3690935a67\transformed\jetified-profileinstaller-1.3.1\AndroidManifest.xml:37:13-35
+169            android:exported="true"
+169-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\M.Sardor\.gradle\caches\8.10.2\transforms\39f3708d505cc022f9089d3690935a67\transformed\jetified-profileinstaller-1.3.1\AndroidManifest.xml:38:13-36
+170            android:permission="android.permission.DUMP" >
+170-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\M.Sardor\.gradle\caches\8.10.2\transforms\39f3708d505cc022f9089d3690935a67\transformed\jetified-profileinstaller-1.3.1\AndroidManifest.xml:39:13-57
+171            <intent-filter>
+171-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\M.Sardor\.gradle\caches\8.10.2\transforms\39f3708d505cc022f9089d3690935a67\transformed\jetified-profileinstaller-1.3.1\AndroidManifest.xml:40:13-42:29
+172                <action android:name="androidx.profileinstaller.action.INSTALL_PROFILE" />
+172-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\M.Sardor\.gradle\caches\8.10.2\transforms\39f3708d505cc022f9089d3690935a67\transformed\jetified-profileinstaller-1.3.1\AndroidManifest.xml:41:17-91
+172-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\M.Sardor\.gradle\caches\8.10.2\transforms\39f3708d505cc022f9089d3690935a67\transformed\jetified-profileinstaller-1.3.1\AndroidManifest.xml:41:25-88
+173            </intent-filter>
+174            <intent-filter>
+174-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\M.Sardor\.gradle\caches\8.10.2\transforms\39f3708d505cc022f9089d3690935a67\transformed\jetified-profileinstaller-1.3.1\AndroidManifest.xml:43:13-45:29
+175                <action android:name="androidx.profileinstaller.action.SKIP_FILE" />
+175-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\M.Sardor\.gradle\caches\8.10.2\transforms\39f3708d505cc022f9089d3690935a67\transformed\jetified-profileinstaller-1.3.1\AndroidManifest.xml:44:17-85
+175-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\M.Sardor\.gradle\caches\8.10.2\transforms\39f3708d505cc022f9089d3690935a67\transformed\jetified-profileinstaller-1.3.1\AndroidManifest.xml:44:25-82
+176            </intent-filter>
+177            <intent-filter>
+177-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\M.Sardor\.gradle\caches\8.10.2\transforms\39f3708d505cc022f9089d3690935a67\transformed\jetified-profileinstaller-1.3.1\AndroidManifest.xml:46:13-48:29
+178                <action android:name="androidx.profileinstaller.action.SAVE_PROFILE" />
+178-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\M.Sardor\.gradle\caches\8.10.2\transforms\39f3708d505cc022f9089d3690935a67\transformed\jetified-profileinstaller-1.3.1\AndroidManifest.xml:47:17-88
+178-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\M.Sardor\.gradle\caches\8.10.2\transforms\39f3708d505cc022f9089d3690935a67\transformed\jetified-profileinstaller-1.3.1\AndroidManifest.xml:47:25-85
+179            </intent-filter>
+180            <intent-filter>
+180-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\M.Sardor\.gradle\caches\8.10.2\transforms\39f3708d505cc022f9089d3690935a67\transformed\jetified-profileinstaller-1.3.1\AndroidManifest.xml:49:13-51:29
+181                <action android:name="androidx.profileinstaller.action.BENCHMARK_OPERATION" />
+181-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\M.Sardor\.gradle\caches\8.10.2\transforms\39f3708d505cc022f9089d3690935a67\transformed\jetified-profileinstaller-1.3.1\AndroidManifest.xml:50:17-95
+181-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\M.Sardor\.gradle\caches\8.10.2\transforms\39f3708d505cc022f9089d3690935a67\transformed\jetified-profileinstaller-1.3.1\AndroidManifest.xml:50:25-92
+182            </intent-filter>
+183        </receiver>
+184
+185        <service
+185-->[com.google.android.datatransport:transport-backend-cct:2.3.3] C:\Users\M.Sardor\.gradle\caches\8.10.2\transforms\1980fbc8993c901f58cec4149e557a76\transformed\jetified-transport-backend-cct-2.3.3\AndroidManifest.xml:29:9-35:19
+186            android:name="com.google.android.datatransport.runtime.backends.TransportBackendDiscovery"
+186-->[com.google.android.datatransport:transport-backend-cct:2.3.3] C:\Users\M.Sardor\.gradle\caches\8.10.2\transforms\1980fbc8993c901f58cec4149e557a76\transformed\jetified-transport-backend-cct-2.3.3\AndroidManifest.xml:30:13-103
+187            android:exported="false" >
+187-->[com.google.android.datatransport:transport-backend-cct:2.3.3] C:\Users\M.Sardor\.gradle\caches\8.10.2\transforms\1980fbc8993c901f58cec4149e557a76\transformed\jetified-transport-backend-cct-2.3.3\AndroidManifest.xml:31:13-37
+188            <meta-data
+188-->[com.google.android.datatransport:transport-backend-cct:2.3.3] C:\Users\M.Sardor\.gradle\caches\8.10.2\transforms\1980fbc8993c901f58cec4149e557a76\transformed\jetified-transport-backend-cct-2.3.3\AndroidManifest.xml:32:13-34:39
+189                android:name="backend:com.google.android.datatransport.cct.CctBackendFactory"
+189-->[com.google.android.datatransport:transport-backend-cct:2.3.3] C:\Users\M.Sardor\.gradle\caches\8.10.2\transforms\1980fbc8993c901f58cec4149e557a76\transformed\jetified-transport-backend-cct-2.3.3\AndroidManifest.xml:33:17-94
+190                android:value="cct" />
+190-->[com.google.android.datatransport:transport-backend-cct:2.3.3] C:\Users\M.Sardor\.gradle\caches\8.10.2\transforms\1980fbc8993c901f58cec4149e557a76\transformed\jetified-transport-backend-cct-2.3.3\AndroidManifest.xml:34:17-36
+191        </service>
+192        <service
+192-->[com.google.android.datatransport:transport-runtime:2.2.6] C:\Users\M.Sardor\.gradle\caches\8.10.2\transforms\8ae9e1ca59954aac81cd288cb5565be7\transformed\jetified-transport-runtime-2.2.6\AndroidManifest.xml:26:9-30:19
+193            android:name="com.google.android.datatransport.runtime.scheduling.jobscheduling.JobInfoSchedulerService"
+193-->[com.google.android.datatransport:transport-runtime:2.2.6] C:\Users\M.Sardor\.gradle\caches\8.10.2\transforms\8ae9e1ca59954aac81cd288cb5565be7\transformed\jetified-transport-runtime-2.2.6\AndroidManifest.xml:27:13-117
+194            android:exported="false"
+194-->[com.google.android.datatransport:transport-runtime:2.2.6] C:\Users\M.Sardor\.gradle\caches\8.10.2\transforms\8ae9e1ca59954aac81cd288cb5565be7\transformed\jetified-transport-runtime-2.2.6\AndroidManifest.xml:28:13-37
+195            android:permission="android.permission.BIND_JOB_SERVICE" >
+195-->[com.google.android.datatransport:transport-runtime:2.2.6] C:\Users\M.Sardor\.gradle\caches\8.10.2\transforms\8ae9e1ca59954aac81cd288cb5565be7\transformed\jetified-transport-runtime-2.2.6\AndroidManifest.xml:29:13-69
+196        </service>
+197
+198        <receiver
+198-->[com.google.android.datatransport:transport-runtime:2.2.6] C:\Users\M.Sardor\.gradle\caches\8.10.2\transforms\8ae9e1ca59954aac81cd288cb5565be7\transformed\jetified-transport-runtime-2.2.6\AndroidManifest.xml:32:9-34:40
+199            android:name="com.google.android.datatransport.runtime.scheduling.jobscheduling.AlarmManagerSchedulerBroadcastReceiver"
+199-->[com.google.android.datatransport:transport-runtime:2.2.6] C:\Users\M.Sardor\.gradle\caches\8.10.2\transforms\8ae9e1ca59954aac81cd288cb5565be7\transformed\jetified-transport-runtime-2.2.6\AndroidManifest.xml:33:13-132
+200            android:exported="false" />
+200-->[com.google.android.datatransport:transport-runtime:2.2.6] C:\Users\M.Sardor\.gradle\caches\8.10.2\transforms\8ae9e1ca59954aac81cd288cb5565be7\transformed\jetified-transport-runtime-2.2.6\AndroidManifest.xml:34:13-37
+201    </application>
+202
+203</manifest>
